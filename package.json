@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "braintree": "^2.1.1",
+    "querystring": "^0.2.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.88.0"
+  }
+}

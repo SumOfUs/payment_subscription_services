@@ -1,0 +1,23 @@
+{
+    "Records": [
+        {
+            "eventID": "a63e861c0b85c1e5fb34ca6a8387b2e7",
+            "eventName": "INSERT",
+            "eventVersion": "1.1",
+            "eventSource": "aws:dynamodb",
+            "awsRegion": "us-west-2",
+            "dynamodb": {
+                "ApproximateCreationDateTime": 1500557520,
+                "Keys": {
+                    "subscription_id": {
+                        "S": "98kf6m"
+                    }
+                },
+                "SequenceNumber": "200000000003915269791",
+                "SizeBytes": 21,
+                "StreamViewType": "NEW_IMAGE"
+            },
+            "eventSourceARN": "arn:aws:dynamodb:us-west-2:108409592308:table/FailedBraintreeSubscriptions-experiment/stream/2017-07-20T13:24:25.169"
+        }
+    ]
+}

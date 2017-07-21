@@ -1,6 +1,6 @@
-yarn
+npm install
 
-serverless deploy \
+ ./node_modules/serverless/bin/serverless deploy \
   -s prod \
   --verbose \
   --bt_merchant_id $BT_MERCHANT_ID \

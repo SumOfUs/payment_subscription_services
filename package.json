@@ -5,6 +5,7 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.88.0"
+    "aws-sdk": "^2.88.0",
+    "serverless": "^1.18.0"
   }
 }

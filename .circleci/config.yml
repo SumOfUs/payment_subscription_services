@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -19,6 +19,13 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: install-semver
+          command: 'npm install'
+
+      - run:
+          name: where
+          command: 'ls && pwd && rm -rf node_modules'
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -31,9 +38,17 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run:
+          name: install-npm-wee
+          command: 'npm install && ls node_modules'
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      # - run: npm install serverless
       # run tests!
       # - run: yarn test
-
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then

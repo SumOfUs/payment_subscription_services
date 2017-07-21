@@ -1,8 +1,7 @@
 npm install
 
  ./node_modules/serverless/bin/serverless deploy \
-  -s prod \
-  --verbose \
+  --stage prod \
   --bt_merchant_id $BT_MERCHANT_ID \
   --bt_public_key $BT_PUBLIC_KEY \
   --bt_private_key $BT_PRIVATE_KEY \
